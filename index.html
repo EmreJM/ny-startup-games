@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
 	<script src="jquery-1.11.1.min.js"></script>
-	<script src="jquery-migrate-1.4.1.min.js"></script>
 	<script src="jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<script src="main.js"></script>
@@ -14,12 +13,12 @@
 
 <body>
 
-	<div data-role="header" data-position="fixed" data-theme="a" role="banner" class="ui-header ui-bar-a ui-header-fixed slidedown ui-fixed-hidden">
-		<a href="#mainmenu" data-role="button" class="ui-btn ui-shadow ui-corner-all">Palaa päävalikkoon</a>
+	<div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-a ui-header-fixed slidedown ui-fixed-hidden">
+		<a href="#mainmenu"  data-transition="slidedown" data-role="button" class="ui-btn ui-shadow ui-corner-all">Palaa päävalikkoon</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Peli</h1>
 	</div>
 
-	<!-- Start of second page -->
+	<!-- Main menu -->
 	<div data-role="page" id="mainmenu">
 		<div role="main" class="ui-content">
 			<p>Tervetuloa peliin.</p>

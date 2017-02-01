@@ -3,8 +3,12 @@
 	float: left !important;
 }
 
+[data-role="header"] > h1 {
+	color: white;
+}
+
 [data-role="page"] {
-	margin-top: 45px;
+	margin-top: 44px;
 }
 
 [data-role="footer"] {
@@ -16,4 +20,26 @@
 [data-role="footer"] > a {
 	margin: 2px 5px;
 	display: block !important;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background: #666666;
+}
+
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+    background: #34cc99;
+	border-color: #34cc99;
+}
+
+.ui-btn-corner-all, .ui-btn.ui-corner-all, .ui-slider-track.ui-corner-all, .ui-flipswitch.ui-corner-all, .ui-li-count {
+	border-radius: initial;
+}
+
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+    text-shadow: none;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    color: white;
+    text-shadow: none;
 }
