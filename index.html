@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Peli</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery-migrate-1.4.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<script src="main.js"></script>
+</head>
+
+<body>
+
+	<div data-role="header" data-position="fixed" data-theme="a" role="banner" class="ui-header ui-bar-a ui-header-fixed slidedown ui-fixed-hidden">
+		<a href="#mainmenu" data-role="button" class="ui-btn ui-shadow ui-corner-all">Palaa päävalikkoon</a>
+		<h1 class="ui-title" role="heading" aria-level="1">Peli</h1>
+	</div>
+
+	<!-- Start of second page -->
+	<div data-role="page" id="mainmenu">
+		<div role="main" class="ui-content">
+			<p>Tervetuloa peliin.</p>
+		</div>
+
+		<div data-role="footer">
+			<a data-role="button" href="#scene1">Aloita peli</a>
+		</div>
+	</div>
+
+	<!-- Scene 1 -->
+	<div data-role="page" id="scene1">
+		<div role="main" class="ui-content">
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+			<a href="#scene2" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 2</a>
+			<a href="#scene3" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 3</a>
+			<a href="#scene4" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 4</a>
+		</div>
+	</div>
+
+	<!-- Scene 2 -->
+	<div data-role="page" id="scene2">
+		<div role="main" class="ui-content">
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+		</div>
+	</div>
+
+	<!-- Scene 3 -->
+	<div data-role="page" id="scene3">
+		<div role="main" class="ui-content">
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+		</div>
+	</div>
+
+	<!-- Scene 4 -->
+	<div data-role="page" id="scene4">
+		<div role="main" class="ui-content">
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+		</div>
+	</div>
+</body>
+</html>
