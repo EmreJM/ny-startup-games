@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Peli</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<script src="main.js"></script>
+
+</head>
+
+<body>
+	<!-- Menu bar -->
+	<div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-a ui-header-fixed ui-fixed-hidden">
+		<a id="menubutton" href="#pauseMenu" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Lopeta peli</a>
+		<h1 class="ui-title" role="heading" aria-level="1">Peli</h1>
+	</div>
+
+	<!-- Pause menu -->
+	<div data-role="popup" id="pauseMenu" data-overlay-theme="b" data-theme="b" data-dismissible="false">
+		<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+			<h1 class="ui-title" role="heading" aria-level="1">Lopeta peli?</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<h3 class="ui-title">Haluatko lopettaa pelin?</h3>
+		<p>Edistymistäsi ei tallenneta.</p>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Ei</a>
+			<a href="#mainmenu" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="fade">Kyllä</a>
+		</div>
+	</div>
+
+	<!-- Credits -->
+	<div data-role="popup" id="credits" data-overlay-theme="b" data-theme="b">
+		<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+			<h1 class="ui-title" role="heading" aria-level="1">Pelin tekijät</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<h2>Tiimin nimi</h2>
+				<ul>
+					<li>Tatu Arvela</li>
+					<li>Emre Olgun</li>
+					<li>Minna Kammonen</li>
+					<li>Minttu Johansson</li>
+					<li>Teemu Lipponen</li>
+				</ul>
+			<p>Tehty NY Start-Up Games -kurssilla</p>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Sulje</a>
+		</div>
+	</div>
+
+	<!-- Main menu -->
+	<div data-role="page" id="mainmenu">
+		<div role="main" class="ui-content">
+			<div id="menudiv">
+				<h1>Peli</h1>
+				<p>Tervetuloa peliin.</p>
+				<a data-role="button" href="#scene1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Aloita peli</a>
+				<a href="#credits" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Tekijät</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scene 1 -->
+	<div data-role="page" id="scene1">
+		<div role="main" class="ui-content">
+			<h1>Scene 1</h1>
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+			<a href="#scene2" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 2</a>
+			<a href="#scene3" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 3</a>
+			<a href="#scene4" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 4</a>
+            <a href="#scene5" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 5 (Testi sivu)</a>
+		</div>
+	</div>
+
+	<!-- Scene 2 -->
+	<div data-role="page" id="scene2">
+		<div role="main" class="ui-content">
+			<h1>Scene 2</h1>
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+		</div>
+	</div>
+
+	<!-- Scene 3 -->
+	<div data-role="page" id="scene3">
+		<div role="main" class="ui-content">
+			<h1>Scene 3</h1>
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+		</div>
+	</div>
+
+	<!-- Scene 4 -->
+	<div data-role="page" id="scene4">
+		<div role="main" class="ui-content">
+			<h1>Scene 4</h1>
+			<p>Valitse vaihtoehto.</p>
+		</div>
+
+		<div data-role="footer">
+		</div>
+	</div>
+    
+     
+    <!-- Scene 5 -->
+	<div data-role="page" id="scene5">
+		<div role="main" class="ui-content">
+			<h1>Scene 5</h1>
+			<p>Valitse jotain näistä.</p>
+		</div>
+
+<!-- Random scripti -->
+<script>
+
+var randomlinks=new Array()
+
+randomlinks[0]="#scene2"
+randomlinks[1]="#scene3"
+randomlinks[2]="#scene4"
+
+
+function randomlink(){
+window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+}
+</script>
+  
+        
+		<div data-role="footer">
+		<a href="javascript:randomlink()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene Random</a>
+			<a href="#sceneB" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene B</a>
+        </div>
+        
+	</div>
+<!-- Tähän loppuu Scene 5 -->    
+    
+                    
+    
+     
+</body>
+</html>
