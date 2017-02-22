@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html>
+<html lang="fi">
 <head>
 	<title>Peli</title>
 	<meta charset="UTF-8">
@@ -57,72 +57,72 @@
 			<div id="menudiv">
 				<h1>Peli</h1>
 				<p>Tervetuloa peliin.</p>
-				<a data-role="button" href="#scene1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Aloita peli</a>
+				<a data-role="button" href="#aloitusruutu" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Aloita peli</a>
 				<a href="#credits" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Tekijät</a>
 			</div>
+		</div>
+	</div>
+
+	<!-- Aloitusruutu, Start screen-->
+	<div data-role="page" id="aloitusruutu">
+		<div role="main" class="ui-content">
+			<h1>Aloitusruutu</h1>
+			<p>Olet kahdeksannella luokalla. Aloita valitsemalla keskiarvosi, jolla jatkat yhdeksännelle luokalle.</p>
+		</div>
+
+		<div data-role="footer">
+			<a href="#scene1" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">6,5</a> <!-- Scene 1 -->
+			<a href="#scene2" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">7,8</a> <!-- Scene 2 -->
+			<a href="#scene3" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">9</a> <!-- Scene 3 -->
 		</div>
 	</div>
 
 	<!-- Scene 1 -->
 	<div data-role="page" id="scene1">
 		<div role="main" class="ui-content">
-			<h1>Scene 1</h1>
-			<p>Olet kahdeksannella luokalla. Aloita valitsemalla keskiarvosi, jolla jatkat yhdeksännelle luokalle.</p>
+			<h1>Ruutu 1</h1>
+			<p>1.Keskiarvosi on 6,5, olet valinnan edessä koulunkäynnin suhteen siirtyessäsi yhdeksännelle luokalle</p>
 		</div>
 
 		<div data-role="footer">
-			<a href="#scene2" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">6,5</a> <!-- Scene 2 -->
-			<a href="#scene3" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">7,8</a> <!-- Scene 3 -->
-			<a href="#scene4" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">9</a> <!-- Scene 4 -->
+            <a href="#scene7" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Tsemppaat ja keskityt koulunkäyntiin nostaaksesi keskiarvoasi (siirry ruutuun 7) </a> <!-- Scene 7 -->
+			<a href="#scene6" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkat koulunkäyntiä entiseen malliin (siirry ruutuun 6) </a> <!-- Scene 6 -->
+			<a href="#sceneRandom" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et jaksa kiinnostua koulunkäynnistä (siirry ruutuun 4 tai 5) </a> <!-- Scene 4 or 5 -->
 		</div>
 	</div>
 
 	<!-- Scene 2 -->
 	<div data-role="page" id="scene2">
 		<div role="main" class="ui-content">
-			<h1>Scene 2</h1>
-			<p>1.Keskiarvosi on 6,5, olet valinnan edessä koulunkäynnin suhteen siirtyessäsi yhdeksännelle luokalle</p>
-		</div>
-
-		<div data-role="footer">
-            <a href="#scene6" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Tsemppaat ja keskityt koulunkäyntiin nostaaksesi keskiarvoasi (siirry ruutuun 7) </a> <!-- Scene 6 -->
-			<a href="#scene7" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkat koulunkäyntiä entiseen malliin (siirry ruutuun 6) </a> <!-- Scene 7 -->
-			<a href="#scene8" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et jaksa kiinnostua koulunkäynnistä (siirry ruutuun 4 tai 5) </a> <!-- Scene 8 -->
-		</div>
-	</div>
-
-	<!-- Scene 3 -->
-	<div data-role="page" id="scene3">
-		<div role="main" class="ui-content">
-			<h1>Scene 3</h1>
+			<h1>Ruutu 2</h1>
 			<p>2.Keskiarvosi on 7,8, olet valinnan edessä koulunkäynnin suhteen siirtyessäsi yhdeksännelle luokalle </p>
 		</div>
 
 		<div data-role="footer">
 		
-        <a href="#scene9" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Tsemppaat ja keskityt koulunkäyntiin nostaaksesi keskiarvoasi (siirry ruutuun 8) </a> <!-- Scene 9 -->
-			<a href="#scene10" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkat koulunkäyntiä entiseen malliin (siirry ruutuun 7) </a> <!-- Scene 10 -->
-			<a href="#scene11" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et jaksa kiinnostua koulunkäynnistä (siirry ruutuun 6)  </a> <!-- Scene 11 -->
+        <a href="#scene8" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Tsemppaat ja keskityt koulunkäyntiin nostaaksesi keskiarvoasi (siirry ruutuun 8) </a> <!-- Scene 8 -->
+			<a href="#scene7" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkat koulunkäyntiä entiseen malliin (siirry ruutuun 7) </a> <!-- Scene 7 -->
+			<a href="#scene6" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et jaksa kiinnostua koulunkäynnistä (siirry ruutuun 6)  </a> <!-- Scene 6 -->
             </div>
 	</div>
 
-	<!-- Scene 4 -->
-	<div data-role="page" id="scene4">
+	<!-- Scene 3 -->
+	<div data-role="page" id="scene3">
 		<div role="main" class="ui-content">
-			<h1>Scene 4</h1>
+			<h1>Ruutu 3</h1>
 			<p>3. Keskiarvosi on 9, olet valinnan edessä koulunkäynnin suhteen siirtyessäsi yhdeksännelle luokalle </p>
 		</div>
 
 		<div data-role="footer">
-            <a href="#scene12" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Tsemppaat ja keskityt koulunkäyntiin nostaaksesi keskiarvoasi (siirry ruutuun 9) </a> <!-- Scene 12 -->
-			<a href="#scene13" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkat koulunkäyntiä entiseen malliin (siirry ruutuun 8) </a> <!-- Scene 13 -->
-			<a href="#scene14" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et jaksa kiinnostua koulunkäynnistä (siirry ruutuun 7) </a> <!-- Scene 14 -->
+            <a href="#scene9" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Tsemppaat ja keskityt koulunkäyntiin nostaaksesi keskiarvoasi (siirry ruutuun 9) </a> <!-- Scene 9 -->
+			<a href="#scene8" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkat koulunkäyntiä entiseen malliin (siirry ruutuun 8) </a> <!-- Scene 8 -->
+			<a href="#scene7" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et jaksa kiinnostua koulunkäynnistä (siirry ruutuun 7) </a> <!-- Scene 7 -->
 		</div>
 	</div>
     
      
     <!-- Scene Random -->
-	<div data-role="page" id="scene5">
+	<div data-role="page" id="sceneRandom">
 		<div role="main" class="ui-content">
 			<h1>Scene 5</h1>
 			<p>Valitse jotain näistä.</p>
@@ -150,10 +150,177 @@ window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
         </div>
         
 	</div>
-<!-- Tähän loppuu Scene Random -->    
+<!-- Tähän loppuu Scene Random -->  
     
-                    
+<!-- Scene 4 -->
+	<div data-role="page" id="scene4">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 4</h1>
+			<p>4. Koulunkäynti ei kiinnosta sinua yhtään ja sinulle kertyy 9.luokan aikana hirveästi poissaoloja. Kehotuksista huolimatta laiminlyöt koko yhdeksännen luokan ja keväällä todellisuus tulee vastaan, kun olet yksi niistä muutamista luokallasi, jotka eivät päättötodistusta saaneet. Tästä huolimatta oppivelvollisuutesi jatkuu ja syksyllä löydät itsesi 10 luokalta. (Siirry ruutuun 10) </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#scene10" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Siirry ruutuun 10</a> <!-- Scene 10 -->
+			
+		</div>
+	</div>
     
+ <!-- Scene 5 -->
+	<div data-role="page" id="scene5">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 5</h1>
+			<p>5. Koulunkäynti ei kiinnosta sinua ollenkaan, mutta ihmeellisellä tuurilla ja opettajien armosta saat keväällä päättötodistuksen, jossa keskiarvosi on juuri vitosen yläpuolella. Aiemmin keväällä sinun oli kuitenkin täytynyt yhteishaussa miettiä, mihin olisit jatkanut huolimatta siitä millaisen todistuksen keväällä lopulta saat. </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#scene11" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Koulunkäynti ei kiinnostanut sinua yläasteella, joten miksi se kiinnostaisi jatkossakaan. Päätät sulkea mielestäsi koko yhteishaun ja keskittyä oleelliseen eli kavereiden kanssa hengailuun. (Siirry ruutuun 11) </a> <!-- Scene 11 -->
+			<a href="#scene12" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Toteat ettei tuleva keskiarvo päättötodistuksessa tule riittämään sinne minne haluaisit jatkaa, joten päätät lähteä 10-luokalle yrittämään vielä nostaa keskiarvoasi. (Siirry ruutuun 12) </a> <!-- Scene 12 -->
+			<a href="#scenePOPUP!" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Päätät hakea yhteishaussa niin ammattikouluun kuin lukioon huolimatta siitä, että keskiarvosi on todella alhainen. Ehkä tuurilla satutkin pääsemään sisälle. </a> <!-- Scene POP UP! -->
+		</div>
+	</div>               
+    
+    <!-- Scene 6 -->
+	<div data-role="page" id="scene6">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 6</h1>
+			<p>6. 9.luokan keväällä keskiarvosi on 6.5. Yhteishaut ovat tulossa ja mietit mitä aiot niiden suhteen tehdä </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#sceneRandom" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Haet ammattikouluun (60% tod näk siirry ruutuun 18, 40% tod näk siirry ruutuun 12) </a> <!-- Scene Random -->
+			<a href="#sceneRandom" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Haet Lukioon (30% tod näk siirtyy ruutuun 21, 70% tod näk sirtyy ruutuun 12) </a> <!-- Scene Random -->
+			<a href="#scene11" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Yhteishaku ei kiinnosta. Ihan sama! (siirry ruutuun 11) </a> <!-- Scene 11 -->
+		</div>
+	</div>
+    
+    <!-- Scene 7 -->
+	<div data-role="page" id="scene7">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 7</h1>
+			<p>7. 9.luokan keväällä keskiarvosi on 7.8. Yhteishaut ovat tulossa ja mietit mitä aiot niiden suhteen tehdä </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#sceneRandom" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Haet ammattikouluun (80% tod näk siirtyyruutuun 18, 20% tod näk siirtyy ruutuun 17.) </a> <!-- Scene Random -->
+			<a href="#scene19" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Haet lukioon (Siirtyy ruutuun 19) </a> <!-- Scene 19 -->
+			<a href="#scene11" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et hae tänä keväänä yhteishaussa mihinkään (Siirtyy ruutuun 11) </a> <!-- Scene 11 -->
+		</div>
+	</div>
      
+<!-- Scene 8 -->
+	<div data-role="page" id="scene8">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 8</h1>
+			<p>8. 9.luokan keväällä keskiarvosi on 9. Yhteishaut ovat tulossa ja mietit mitä aiot niiden suhteen tehdä </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#sceneRandom" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Haet lukioon (25% tod näk siirtyy ruutuun 20, 75% tod näk siirtyy ruutuun 21) </a> <!-- Scene Random -->
+			<a href="#scene18" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Haet ammattikouluun (Siirtyy ruutuun 18) </a> <!-- Scene 18 -->
+			<a href="#scene11" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et hae tänä keväänä yhteishaussa mihinkään (Siirtyy ruutuun 11)  </a> <!-- Scene 11 -->
+		</div>
+	</div>
+    
+ <!-- Scene 9 -->
+	<div data-role="page" id="scene9">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 9</h1>
+			<p>9. 9.luokan keväällä keskiarvosi on 9.8. Yhteishaut ovat tulossa ja mietit mitä aiot niiden suhteen tehdä </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#scene21" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Haet lukioon (Siirtyy ruutuun 21) </a> <!-- Scene Random -->
+			<a href="#scene18" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Haet ammattikouluun (Siirtyy ruutuun 18) </a> <!-- Scene 18 -->
+			<a href="#scene11" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Et hae tänä keväänä yhteishaussa mihinkään (Siirtyy ruutuun 11)   </a> <!-- Scene 11 -->
+		</div>
+	</div>   
+    
+     <!-- Scene 10 -->
+	<div data-role="page" id="scene10">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 10</h1>
+			<p>10. 10 luokalla olessasi...  </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#scene12" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Otat itseäsi niskasta kiinni (Siirry ruutuun 12)  </a> 
+            <!-- Scene 12 -->
+			<a href="#scenePOPUP" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Päätät lyödä hanskat naulaan ja puuhaat koko vuoden kavereiden kanssa jotain aivan muuta.  </a> 
+            <!-- (siirry Pop up ruutuun jossa lukee: Vuosi hurahti ja hauskaa oli mutta päättötodistus jäi vieläkin saamatta. Kesä meni taas kavereiden kanssa hengaillessa ja lorviessa ja nyt vanhempasi sanovat, että sinun täytyy todella miettiä mitä aiot tehdä, sillä tällainen peli ei enää vetele.
+
+Vaihtoehto 1: Olet jo muutaman vuoden niin sujuvasti vältellyt koulunkäyntiä, joten miksi enää vaivata asialla päätä. Vanhemmat nyt aina nalkuttavat asioista, kyllä ne kohta siitä taas rauhoittuvat. (Siirry ruutuun 11)
+
+Vaihtoehto 2: Alat kyseenalaistamaan sitä kuinka pitkään lopulta voit oppivelvollisuutta vältellä, toisaalta koulunkäynti näyttää sinusta toivottomalta ja ahdistut tästä (Siirry ruutuun 13)
+
+Vaihtoehto 3: Päihteiden käyttö lisääntyi sinulla jo kesän aikana huomattavasti ja bilettäminen ei hidastu vaikka illat pimenevät (Siirry ruutuun 14)  -->
+			
+		</div>
+	</div>
+			
+    
+     <!-- Scene 11 -->
+	<div data-role="page" id="scene11">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 11</h1>
+			<p>11. Et hakenut lainkaan opiskelemaan, mitä aiot nyt tehdä? </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#scene13" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: En mitään (siirry ruutuun 13) </a> <!-- Scene 13 -->
+			<a href="#scene14" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Juhlia ja nauttia vapaudesta (siirry ruutuun 14) </a> <!-- Scene 14 -->
+			<a href="#scene15" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Mennä töihin (siirry ruutuun 15) </a> <!-- Scene 15 -->
+		</div>
+	</div>
+    
+    <!-- Scene 12 -->
+	<div data-role="page" id="scene12">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 12</h1>
+			<p>12. Keskiarvosi ei ole mielestäsi riittävän hyvä, ja päätit lähteä 10 luokalle nostamaan arvosanojasi. Saat nostettua keskiarvoasi ja sinun on päätettävä, mihin seuraavaksi tähtäät? </p>
+		</div>
+
+		<div data-role="footer">
+            <a href="#scene16" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Ammattikouluun (siirry ruutuun 16) </a> <!-- Scene 16 -->
+			<a href="#scene19" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Lukioon (siirry ruutuun 19) </a> <!-- Scene 19 -->
+		</div>
+	</div>
+    
+     <!-- Scene 13 -->
+	<div data-role="page" id="scene13">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 13</h1>
+			<p>13. ei mitään, syrjäytyminen (näitä mä en vielä kirjota, odotan edelliset ruudut eka) </p>
+		</div>
+
+		<div data-role="footer">
+            <!-- Let there be choices -->
+		</div>
+	</div>   
+            
+    <!-- Scene 14 -->
+    <div data-role="page" id="scene14">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 14</h1>
+			<p>14. juhliminen päihteet (näitä mä en vielä kirjota, odotan edelliset ruudut eka) </p>
+		</div>
+
+		<div data-role="footer">
+            <!-- Let there be choices -->
+		</div>
+	</div>
+       
+            <!-- Scene 15 -->
+    <div data-role="page" id="scene15">
+		<div role="main" class="ui-content">
+			<h1>Ruutu 15</h1>
+			<p>15. töihin (näitä mä en vielä kirjota, odotan edelliset ruudut eka) </p>
+		</div>
+
+		<div data-role="footer">
+            <!-- Let there be choices -->
+		</div>
+	</div>
+    
+    
 </body>
 </html>
