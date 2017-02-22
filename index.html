@@ -9,6 +9,7 @@
 	<script src="jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<script src="main.js"></script>
+
 </head>
 
 <body>
@@ -40,7 +41,7 @@
 			<h2>Tiimin nimi</h2>
 				<ul>
 					<li>Tatu Arvela</li>
-					<li>Emre</li>
+					<li>Emre Olgun</li>
 					<li>Minna Kammonen</li>
 					<li>Minttu Johansson</li>
 					<li>Teemu Lipponen</li>
@@ -73,6 +74,7 @@
 			<a href="#scene2" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 2</a>
 			<a href="#scene3" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 3</a>
 			<a href="#scene4" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 4</a>
+            <a href="#scene5" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene 5 (Testi sivu)</a>
 		</div>
 	</div>
 
@@ -108,5 +110,41 @@
 		<div data-role="footer">
 		</div>
 	</div>
+    
+     
+    <!-- Scene 5 -->
+	<div data-role="page" id="scene5">
+		<div role="main" class="ui-content">
+			<h1>Scene 5</h1>
+			<p>Valitse jotain näistä.</p>
+		</div>
+
+<!-- Random scripti -->
+<script>
+
+var randomlinks=new Array()
+
+randomlinks[0]="#scene2"
+randomlinks[1]="#scene3"
+randomlinks[2]="#scene4"
+
+
+function randomlink(){
+window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+}
+</script>
+  
+        
+		<div data-role="footer">
+		<a href="javascript:randomlink()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene Random</a>
+			<a href="#sceneB" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Scene B</a>
+        </div>
+        
+	</div>
+<!-- Tähän loppuu Scene 5 -->    
+    
+                    
+    
+     
 </body>
 </html>
