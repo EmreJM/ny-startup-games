@@ -1,4 +1,4 @@
-$.mobile.defaultPageTransition = "flow";
+$.mobile.defaultPageTransition = "slide";
 
 $( document ).ready(function() {
 	$( "#pauseMenu, #credits" ).popup();

@@ -36,12 +36,12 @@ body {
 
 /* Theme tweaks */
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
-    background: #666666;
+	background: #5C6BC0;
 }
 
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
-    background: #34cc99;
-	border-color: #34cc99;
+	background: #3F51B5;
+	border-color: #3F51B5;
 }
 
 .ui-btn-corner-all, .ui-btn.ui-corner-all, .ui-slider-track.ui-corner-all, .ui-flipswitch.ui-corner-all, .ui-li-count {
@@ -49,23 +49,48 @@ body {
 }
 
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
-    text-shadow: none;
+	text-shadow: none;
 }
 
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
-    color: white;
-    text-shadow: none;
+	color: white;
+	text-shadow: none;
+}
+
+.ui-btn {
+	font-size: 16px;
+	max-width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: normal;
+}
+
+.ui-content > p,
+#menudiv > p {
+	font-size: 18px;
+	max-width: 840px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 /* Animation speed */
 .in, .out {
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-duration: 700ms !important;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 700ms !important;
 }
 
 
 /* Main menu */
 .ui-page {
 	text-align: center;
+}
+
+/* Photos */
+.photo {
+	width: calc(100% + 2em);
+	height: 480px;
+	margin-left: -1em;
+	margin-right: -1em;
+	object-fit: cover;
 }
