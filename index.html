@@ -6,6 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
 	<script src="jquery-1.11.1.min.js"></script>
+	<script>
+		// jQuery mobile settings to disable history
+		$( document ).bind( "mobileinit", function() {
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
+			$.mobile.changePage.defaults.changeHash = false;
+		});
+	</script>
 	<script src="jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<script src="main.js"></script>
@@ -90,7 +98,7 @@
 
 
 				function randomlink(){
-				window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+					window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 				}
 			</script>
 		
@@ -178,7 +186,7 @@
 
 
 				function randomlink61(){
-				window.location=randomlinks61[Math.floor(Math.random()*randomlinks61.length)]
+					window.location=randomlinks61[Math.floor(Math.random()*randomlinks61.length)]
 				}
 			</script>
 
@@ -232,7 +240,7 @@
 
 
 				function randomlink7(){
-				window.location=randomlinks7[Math.floor(Math.random()*randomlinks7.length)]
+					window.location=randomlinks7[Math.floor(Math.random()*randomlinks7.length)]
 				}
 			</script>
 		
@@ -265,7 +273,7 @@
 				randomlinks8[10]="#scene21"
 
 				function randomlink8(){
-				window.location=randomlinks8[Math.floor(Math.random()*randomlinks8.length)]
+					window.location=randomlinks8[Math.floor(Math.random()*randomlinks8.length)]
 				}
 			</script>
 		
