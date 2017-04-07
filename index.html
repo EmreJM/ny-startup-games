@@ -6,14 +6,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
 	<script src="jquery-1.11.1.min.js"></script>
-	<script>
+	<!--<script>
 		// jQuery mobile settings to disable history
 		$( document ).bind( "mobileinit", function() {
-			$.mobile.hashListeningEnabled = true;
-			$.mobile.pushStateEnabled = true;
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
 			$.mobile.changePage.defaults.changeHash = false;
 		});
-	</script>
+	</script> -->
+	
+	<script>
+	// estää taaksepäin näppäimen selaimessa sekä ei vahingoita random scriptin ja pop op ikkunat
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+</script> 
+	
+	<!-- Paljon lyhyemppi random scripti
+	
+					<script>
+function randomlinks(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene2"
+    links[1]="#scene3"
+
+ 
+    window.location=links[myrandom]
+}
+</script>	-->
+	
 	<script src="jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<script src="main.js"></script>
@@ -162,47 +185,57 @@ todella huono. Ehkä tuurilla pääsen johonkin kouluun. (siirry ruutuun 46)</a>
 aiot niiden suhteen tehdä.
 </p>
 
+
+
 			<!-- Vaihtoehto 1 -->
-			<script>
-				var randomlinks6a=new Array()
+					<script>
+function randomlinks6a(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+	links[0]="#scene18"
+    links[1]="#scene18"
+	links[2]="#scene18"
+	links[3]="#scene18"
+	links[4]="#scene18"
+	links[5]="#scene18"
+	links[6]="#scene12"
+	links[7]="#scene12"
+	links[8]="#scene12"
+	links[9]="#scene12"
 
-				randomlinks6a[0]="#scene18"
-				randomlinks6a[1]="#scene18"
-				randomlinks6a[2]="#scene18"
-				randomlinks6a[3]="#scene18"
-				randomlinks6a[4]="#scene18"
-				randomlinks6a[5]="#scene18"
-				randomlinks6a[6]="#scene12"
-				randomlinks6a[7]="#scene12"
-				randomlinks6a[8]="#scene12"
-				randomlinks6a[9]="#scene12"
-
-
-				function randomlinks6a(){
-					window.location=randomlinks6a[Math.floor(Math.random()*randomlinks6a.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>	
 			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks6b=new Array()
+						<script>
+function randomlinks6b(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene21"
+    links[1]="#scene21"
+	links[2]="#scene12"
+	links[3]="#scene12"
+	links[4]="#scene12"
+	links[5]="#scene12"
+	links[6]="#scene12"
+	links[7]="#scene12"
+	links[8]="#scene12"
+	links[9]="#scene12"
 
-				randomlinks6b[0]="#scene21"
-				randomlinks6b[1]="#scene21"
-				randomlinks6b[2]="#scene12"
-				randomlinks6b[3]="#scene12"
-				randomlinks6b[4]="#scene12"
-				randomlinks6b[5]="#scene12"
-				randomlinks6b[6]="#scene12"
-				randomlinks6b[7]="#scene12"
-				randomlinks6b[8]="#scene12"
-				randomlinks6b[9]="#scene12"
+ 
+    window.location=links[myrandom]
+}
+</script>		
+			
+			
+			
+			
+			
+			
+			
+			
 
-
-				function randomlinks6b(){
-				window.location=randomlinks6b[Math.floor(Math.random()*randomlinks6b.length)]
-				}
-			</script>
 
 			<a href="javascript:randomlinks6a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Haen ammattikouluun (60% tod näk siirry ruutuun 18, 40% tod näk siirry ruutuun 12)</a> <!-- Scene Random -->
 			<a href="javascript:randomlinks6b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Haen Lukioon (30% tod näk siirtyy ruutuun 21, 70% tod näk sirtyy ruutuun 12)</a> <!-- Scene Random 20% tod näk lukioon-->
@@ -501,25 +534,24 @@ pääset tutustumaan työntekoon käytännössä. </p>
 
 
 		<!-- Vaihtoehto 1 & 2-->
-			<script>
-				var randomlinks22=new Array()
 
-				randomlinks22[0]="#scene23"
-				randomlinks22[1]="#scene24"
-				
-				
+<script>
+function randomlinks22(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene23"
+    links[1]="#scene24"
 
-				function randomlinks22(){
-					window.location=randomlinks22[Math.floor(Math.random()*randomlinks22.length)]
-				}
-			</script>
-
-
+ 
+    window.location=links[myrandom]
+}
+</script>
 
 
-			<a href="javascript:randomlink22()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minulla on jo muutamakin kiinnostava työpaikka mielessäni, josta haluaisin TETharjoittelupaikka
+
+			<a href="javascript:randomlinks22()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minulla on jo muutamakin kiinnostava työpaikka mielessäni, josta haluaisin TETharjoittelupaikka
 kysyä. (siirtyy ruutuun 23/24 [50%/50%]) </a> <!-- Scene random -->
-			<a href="javascript:randomlink22()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: En vielä tiedä, mihin menisin TET-harjoitteluun, mutta voisin kysyä jos opettaja tai
+			<a href="javascript:randomlinks22()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: En vielä tiedä, mihin menisin TET-harjoitteluun, mutta voisin kysyä jos opettaja tai
 vanhempani osaisivat neuvoa sopivan paikan. (siirtyy ruutuun 23/24 [50%/50%])
  </a> <!-- Scene random -->
 			<a href="#scene26" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Ilmaiseksi työvoimaksi en aio ryhtyä. Pääsen TET-harjoitteluun sukulaiseni firmaan, mutten
@@ -603,21 +635,24 @@ pääset tutustumaan työntekoon käytännössä.  </p>
 
 			<!-- Vaihtoehto 1 & 2-->
 			<script>
-				var randomlinks27=new Array()
+function randomlinks27(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene28"
+    links[1]="#scene29"
 
-				randomlinks27[0]="#scene28"
-				randomlinks27[1]="#scene29"
-				
-				
-
-				function randomlinks27(){
-					window.location=randomlinks27[Math.floor(Math.random()*randomlinks27.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>
 			
-			<a href="javascript:randomlink27()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minulla on jo muutamakin kiinnostava työpaikka mielessäni, josta haluaisin TETharjoittelupaikka
+			
+			
+			
+			
+			<a href="javascript:randomlinks27()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minulla on jo muutamakin kiinnostava työpaikka mielessäni, josta haluaisin TETharjoittelupaikka
 kysyä.(siirtyy ruutuun 28/29 [50%/50%]) </a> <!-- Scene random -->
-			<a href="javascript:randomlink27()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: En vielä tiedä, mihin menisin TET-harjoitteluun, mutta voisin kysyä jos opettaja tai
+			<a href="javascript:randomlinks27()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: En vielä tiedä, mihin menisin TET-harjoitteluun, mutta voisin kysyä jos opettaja tai
 vanhempani osaisivat neuvoa sopivan paikan. (siirtyy ruutuun 28/29 [50%/50%]) </a> <!-- Scene random -->
 			<a href="#scene31" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Ilmaiseksi työvoimaksi en aio ryhtyä. Pääsen TET-harjoitteluun sukulaiseni firmaan, mutten
 todellakaan aio siellä mitään töitä tehdä.(siirtyy ruutuun 31)</a> <!-- Scene 31 -->
@@ -700,18 +735,20 @@ oppilaitoksen tutustumispäiviin ja keskustelen opon kanssa vaihtoehdoistani. (s
 pääset tutustumaan työntekoon käytännössä.  </p>
 
 			<!-- Vaihtoehto 1 & 2-->
-			<script>
-				var randomlinks32=new Array()
+					<script>
+function randomlinks32(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene33"
+    links[1]="#scene34"
 
-				randomlinks32[0]="#scene33"
-				randomlinks32[1]="#scene34"
-				
-				
-
-				function randomlinks32(){
-					window.location=randomlinks32[Math.floor(Math.random()*randomlinks32.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>	
+			
+			
+			
 			
 			<a href="javascript:randomlinks32()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minulla on jo muutamakin kiinnostava työpaikka mielessäni, josta haluaisin TETharjoittelupaikka
 kysyä.(siirtyy ruutuun 33/34 [50%/50%]) </a> <!-- Scene random -->
@@ -793,21 +830,17 @@ pääset tutustumaan työntekoon käytännössä. </p>
 
 
 		<!-- Vaihtoehto 1 & 2-->
-			<script>
-				var randomlinks37=new Array()
+					<script>
+function randomlinks37(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene38"
+    links[1]="#scene39"
 
-				randomlinks37[0]="#scene38"
-				randomlinks37[1]="#scene39"
-				
-				
-
-				function randomlinks37(){
-					window.location=randomlinks37[Math.floor(Math.random()*randomlinks37.length)]
-				}
-			</script>
-
-
-
+ 
+    window.location=links[myrandom]
+}
+</script>	
 
 			<a href="javascript:randomlinks37()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minulla on jo muutamakin kiinnostava työpaikka mielessäni, josta haluaisin TETharjoittelupaikka
 kysyä. (siirtyy ruutuun 38/39 [50%/50%]) </a> <!-- Scene random -->
@@ -876,19 +909,17 @@ pääset tutustumaan työntekoon käytännössä. </p>
 
 
 		<!-- Vaihtoehto 1 & 2-->
-			<script>
-				var randomlinks41=new Array()
+						<script>
+function randomlinks41(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene42"
+    links[1]="#scene43"
 
-				randomlinks41[0]="#scene42"
-				randomlinks41[1]="#scene43"
-				
-				
-
-				function randomlinks41(){
-					window.location=randomlinks41[Math.floor(Math.random()*randomlinks41.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>		
 
 
 
@@ -1264,46 +1295,56 @@ tuntuu raskaalta, mutta tsemppaan silti täysillä. (siirtyy ruutuun 118/119 [50
 			<h1>Ruutu 116</h1>
 			<p>Sait harjoittelupaikan, joka ei ole ihan sitä, mitä olisit halunnut tehdä.</p>
 			<!-- Vaihtoehto 1 -->
-			<script>
-				var randomlinks116=new Array()
+						<script>
+function randomlinks116(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene118"
+    links[1]="#scene118"
+	links[2]="#scene118"
+	links[3]="#scene118"
+	links[4]="#scene118"
+	links[5]="#scene118"
+	links[6]="#scene119"
+	links[7]="#scene119"
+	links[8]="#scene119"
+	links[9]="#scene119"
 
-				randomlinks116[0]="#scene118"
-				randomlinks116[1]="#scene118"
-				randomlinks116[2]="#scene118"
-				randomlinks116[3]="#scene118"
-				randomlinks116[4]="#scene118"
-				randomlinks116[5]="#scene118"
-				randomlinks116[6]="#scene119"
-				randomlinks116[7]="#scene119"
-				randomlinks116[8]="#scene119"
-				randomlinks116[9]="#scene119"
-				
-			
-				function randomlinks116(){
-					window.location=randomlinks116[Math.floor(Math.random()*randomlinks116.length)]
-				}
-			</script>
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks116b=new Array()
+ 
+    window.location=links[myrandom]
+}
+</script>	
+			<!-- Vaihtoehto 2 -->			
+						<script>
+function randomlinks116b(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene118"
+    links[1]="#scene118"
+	links[2]="#scene118"
+	links[3]="#scene119"
+	links[4]="#scene119"
+	links[5]="#scene119"
+	links[6]="#scene119"
+	links[7]="#scene119"
+	links[8]="#scene119"
+	links[9]="#scene119"
 
-				randomlinks116b[0]="#scene118"
-				randomlinks116b[1]="#scene118"
-				randomlinks116b[2]="#scene118"
-				randomlinks116b[3]="#scene119"
-				randomlinks116b[4]="#scene119"
-				randomlinks116b[5]="#scene119"
-				randomlinks116b[6]="#scene119"
-				randomlinks116b[7]="#scene119"
-				randomlinks116b[8]="#scene119"
-				randomlinks116b[9]="#scene119"
-				
-				
+ 
+    window.location=links[myrandom]
+}
+</script>				
 			
-				function randomlinks116b(){
-					window.location=randomlinks116b[Math.floor(Math.random()*randomlinks116b.length)]
-				}
-			</script>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 			<a href="javascript:randomlinks116()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Yritän panostaa harjoitteluun silti täysillä, ehkä saan ensi kesäksi täältä myös kesätyöpaikan
 ja tärkeää oman alan työkokemusta, vaikkei tämä oma juttuni olekaan. Harjoittelun lopussa olevaan
@@ -1356,22 +1397,24 @@ mutta arvosana olisi voinut olla parempikin. Olet pettynyt siihen, ettei harjoit
 palaute ollut kovin positiivista. Väkisinkin mietit, oletkohan kuitenkaan oikealla alalla.</p>
 
 			<!-- Vaihtoehto 3 -->
-			<script>
-				var randomlinks119=new Array()
+									<script>
+function randomlinks119(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene130"
+    links[1]="#scene131"
 
-				randomlinks119[0]="#scene130"
-				randomlinks119[1]="#scene131"
-				
-				function randomlinks119(){
-					window.location=randomlinks119[Math.floor(Math.random()*randomlinks119.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>		
+
 
 			<a href="#scene125" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Aion panostaa opintoihin enemmän jatkossa. Toivottavasti seuraava harjoittelupaikka on
 parempi. (siirry ruutuun 125)</a> <!-- Scene  -->
 			<a href="#scene126" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Jatkan kyllä opintojani, mutta aion selvittää samalla muita opiskeluvaihtoehtoja, jotka
 voisivat sopia itselleni paremmin. (siirry ruutuun 126)</a> <!-- Scene  -->
-			<a href="#javascript:randomlinks119()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Ryhdyn selvittämään mahdollisuuksiani vaihtaa koulun sisällä opintojeni
+			<a href="javascript:randomlinks119()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Ryhdyn selvittämään mahdollisuuksiani vaihtaa koulun sisällä opintojeni
 suuntautumisvaihtoehtoa. (siirtyy ruutuun 130/131 [50%/50%])</a> <!-- Scene random -->
 	</div>
 	</div>
@@ -1383,20 +1426,21 @@ suuntautumisvaihtoehtoa. (siirtyy ruutuun 130/131 [50%/50%])</a> <!-- Scene rand
 			<p>Pohdit haluatko jatkaa ammattikoulussa opiskelua ollenkaan. Se ei ole tuntunut omalta alaltasi.</p>
 
 			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks120=new Array()
+<script>
+function randomlinks120(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene130"
+    links[1]="#scene131"
 
-				randomlinks120[0]="#scene130"
-				randomlinks120[1]="#scene131"
-				
-				function randomlinks120(){
-					window.location=randomlinks120[Math.floor(Math.random()*randomlinks120.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>	
+			
 			<a href="#scene116" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Jatkan opiskelua, koska en nyt keksi muutakaan vaihtoehtoa. Otat opoon yhteyttä
 harjoittelupaikan saamiseksi. (siirtyy ruutuun 116)</a> <!-- Scene  -->
-			<a href="#javascript:randomlinks120()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Ryhdyn selvittämään mahdollisuuksiani vaihtaa koulun sisällä opintojeni
+			<a href="javascript:randomlinks120()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Ryhdyn selvittämään mahdollisuuksiani vaihtaa koulun sisällä opintojeni
 suuntautumisvaihtoehtoa toiseksi. (siirtyy ruutuun 130/131 [50%/50%])</a> <!-- Scene random -->
 	</div>
 	</div>
@@ -1408,54 +1452,33 @@ suuntautumisvaihtoehtoa toiseksi. (siirtyy ruutuun 130/131 [50%/50%])</a> <!-- S
 			<p>Opettaja järjestää keskustelun yhdessä sinun ja harjoittelupaikkasi ohjaajan kanssa, jossa pohditaan
 tilannettasi.</p>
 
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks121=new Array()
-
-				randomlinks121[0]="#scene118"
-				randomlinks121[1]="#scene118"
-				randomlinks121[2]="#scene118"
-				randomlinks121[3]="#scene119"
-				randomlinks121[4]="#scene119"
-				randomlinks121[5]="#scene119"
-				randomlinks121[6]="#scene119"
-				randomlinks121[7]="#scene119"
-				randomlinks121[8]="#scene119"
-				randomlinks121[9]="#scene119"
-				
-				
-			
-				function randomlinks121(){
-					window.location=randomlinks121[Math.floor(Math.random()*randomlinks121.length)]
-				}
-			</script>
+			<!-- Vaihtoehto 2 randomlinks116b -->				
 			
 			<!-- Vaihtoehto 3 -->
-			<script>
-				var randomlinks121b=new Array()
+<script>
+function randomlinks121b(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene118"
+    links[1]="#scene118"
+	links[2]="#scene118"
+	links[3]="#scene118"
+	links[4]="#scene119"
+	links[5]="#scene119"
+	links[6]="#scene119"
+	links[7]="#scene119"
+	links[8]="#scene119"
+	links[9]="#scene119"
 
-				randomlinks121b[0]="#scene118"
-				randomlinks121b[1]="#scene118"
-				randomlinks121b[2]="#scene118"
-				randomlinks121b[3]="#scene119"
-				randomlinks121b[4]="#scene119"
-				randomlinks121b[5]="#scene119"
-				randomlinks121b[6]="#scene119"
-				randomlinks121b[7]="#scene119"
-				randomlinks121b[8]="#scene119"
-				randomlinks121b[9]="#scene119"
-				
-			
-				function randomlinks121b(){
-					window.location=randomlinks121b[Math.floor(Math.random()*randomlinks121b.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>
 			<a href="#scene120" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Minusta tuntuu, että harjoittelun ohjaaja haluaa leimata minut huonoksi opiskelijaksi, eikä
 kukaan ymmärrä harjoittelupaikassa olevia ongelmia, joiden takia en voi siellä työskennellä. Keskustelu vain
 varmistaa sen, etten voi jatkaa harjoittelua tässä paikassa. Lopetan harjoittelun ja otan aikalisän
 miettiäkseni, miten voin jatkaa opiskelua. (siirtyy ruutuun 120)</a> <!-- Scene 120 -->
-			<a href="javascript:randomlinks121()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Keskustelussa minulle selviää, mitä harjoittelupaikka odottaa minulta ja saa myös sanottua
+			<a href="javascript:randomlinks116b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Keskustelussa minulle selviää, mitä harjoittelupaikka odottaa minulta ja saa myös sanottua
 mieltäni painavista asioista harjoittelun ohjaajalle. Yhdessä opettajan kanssa sovimme, että jatkan
 harjoittelua ja opettaja selventää harjoittelupaikalle koulun odotuksia ohjaamiseni suhteen. Harjoittelu
 alkaakin sujua paremmin ja voin alkaa valmistautumaan sen lopussa olevaan näyttökokeeseen. (siirtyy ruutuun 118/119 [30%/70%]</a> <!-- Scene random -->
@@ -1853,6 +1876,57 @@ valintasi on, Pitkä vai lyhyt matikka</p>
 	</div>
 	</div>
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<!-- Scene 202 -->
 	<div data-role="page" id="scene202">
 		<div role="main" class="ui-content">
@@ -1873,6 +1947,65 @@ ruutuun 207/208/209 [33%/33%/34%], Jos valitsi kohdassa 19/20/21 vaihtoehdon 3, 
 -->
 	</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	<!-- Scene 203 -->
 	<div data-role="page" id="scene203">
@@ -1890,6 +2023,8 @@ kiinnostavaa (kaikki siirtyy ruutuun 210)</p>
 			<a href="#scene210" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 7:Filosofia</a> <!-- Scene 210 -->
 			<a href="#scene210" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 8: Psykologia</a> <!-- Scene 210 -->
 			<a href="#scene210" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 9: Taito ja taideaineet</a> <!-- Scene 210 -->
+
+
 			
 	</div>
 	</div>
@@ -1955,24 +2090,24 @@ Tunnet itsesi ulkopuoliseksi.</p>
 
 			<!-- Vaihtoehto 1 -->
 			<script>
-				var randomlinks207=new Array()
+function randomlinks207(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene203"
+    links[1]="#scene203"
+	links[2]="#scene203"
+	links[3]="#scene204"
+	links[4]="#scene204"
+	links[5]="#scene204"
+	links[6]="#scene204"
+	links[7]="#scene204"
+	links[8]="#scene204"
+	links[9]="#scene204"
 
-				randomlinks207[0]="#scene203"
-				randomlinks207[1]="#scene203"
-				randomlinks207[2]="#scene203"
-				randomlinks207[3]="#scene204"
-				randomlinks207[4]="#scene204"
-				randomlinks207[5]="#scene204"
-				randomlinks207[6]="#scene204"
-				randomlinks207[7]="#scene204"
-				randomlinks207[8]="#scene204"
-				randomlinks207[9]="#scene204"
-				
-			
-				function randomlinks207(){
-					window.location=randomlinks207[Math.floor(Math.random()*randomlinks207.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>
 
 			<a href="javascript:randomlinks207()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Päätät keskittyä opiskeluun. Onhan sinulla onneksi vanhat kaverisi joihin voit pitää yhteyttä,
 vaikkei koulusta ystäviä löytyisikään. (siirtyy ruutuun 203/204 [30%/70%])</a> <!-- Scene random -->
@@ -2202,24 +2337,24 @@ ovat vuotta nuoremmat oppilaat, joita en tunne niin hyvin. (siirtyy ruutuun 251)
 
 			<!-- Vaihtoehto 2 -->
 			<script>
-				var randomlinks221=new Array()
+function randomlinks221(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene226"
+    links[1]="#scene226"
+	links[2]="#scene226"
+	links[3]="#scene226"
+	links[4]="#scene226"
+	links[5]="#scene226"
+	links[6]="#scene227"
+	links[7]="#scene227"
+	links[8]="#scene227"
+	links[9]="#scene227"
 
-				randomlinks221[0]="#scene226"
-				randomlinks221[1]="#scene226"
-				randomlinks221[2]="#scene226"
-				randomlinks221[3]="#scene226"
-				randomlinks221[4]="#scene226"
-				randomlinks221[5]="#scene226"
-				randomlinks221[6]="#scene227"
-				randomlinks221[7]="#scene227"
-				randomlinks221[8]="#scene227"
-				randomlinks221[9]="#scene227"
-
-
-				function randomlinks221(){
-					window.location=randomlinks221[Math.floor(Math.random()*randomlinks221.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>
 			
 			<a href="#scene225" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Valmistaudut huolellisesti ja 
 			käytät paljon aikaa lukemiseen (siirtyy ruutuun 225)</a> <!-- Scene 225 -->
@@ -2235,30 +2370,11 @@ ovat vuotta nuoremmat oppilaat, joita en tunne niin hyvin. (siirtyy ruutuun 251)
 			<h1>Ruutu 222</h1>
 			<p>Päätät kirjoittaa syksyllä d-kielen (lukiossa aloitettu), miten valmistautuminen sujuu?</p>
 
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks222=new Array()
-
-				randomlinks222[0]="#scene226"
-				randomlinks222[1]="#scene226"
-				randomlinks222[2]="#scene226"
-				randomlinks222[3]="#scene226"
-				randomlinks222[4]="#scene226"
-				randomlinks222[5]="#scene226"
-				randomlinks222[6]="#scene227"
-				randomlinks222[7]="#scene227"
-				randomlinks222[8]="#scene227"
-				randomlinks222[9]="#scene227"
-
-
-				function randomlinks222(){
-					window.location=randomlinks222[Math.floor(Math.random()*randomlinks222.length)]
-				}
-			</script>
+			<!-- Vaihtoehto 2 randomlinks221 -->
 			
 			<a href="#scene225" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Valmistaudut huolellisesti ja 
 			käytät paljon aikaa lukemiseen (siirtyy ruutuun 225)</a> <!-- Scene 225 -->
-			<a href="javascript:randomlinks222()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Ajatuksesi ovat muualla,
+			<a href="javascript:randomlinks221()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Ajatuksesi ovat muualla,
 			etkä jaksa valmistautua (siirtyy ruutuun 226/227 [60%/40%] )</a> <!-- Scene random -->
 			
 	</div>
@@ -2270,30 +2386,12 @@ ovat vuotta nuoremmat oppilaat, joita en tunne niin hyvin. (siirtyy ruutuun 251)
 			<h1>Ruutu 223</h1>
 			<p>Päätät kirjoittaa syksyllä äidinkielen, miten valmistautuminen sujuu?</p>
 
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks223=new Array()
+			<!-- Vaihtoehto 2 randomlinks221 -->
 
-				randomlinks223[0]="#scene226"
-				randomlinks223[1]="#scene226"
-				randomlinks223[2]="#scene226"
-				randomlinks223[3]="#scene226"
-				randomlinks223[4]="#scene226"
-				randomlinks223[5]="#scene226"
-				randomlinks223[6]="#scene227"
-				randomlinks223[7]="#scene227"
-				randomlinks223[8]="#scene227"
-				randomlinks223[9]="#scene227"
-
-
-				function randomlinks223(){
-					window.location=randomlinks223[Math.floor(Math.random()*randomlinks223.length)]
-				}
-			</script>
 			
 			<a href="#scene225" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Valmistaudut huolellisesti ja 
 			käytät paljon aikaa lukemiseen (siirtyy ruutuun 225)</a> 
-			<a href="javascript:randomlinks223()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Ajatuksesi ovat muualla,
+			<a href="javascript:randomlinks221()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Ajatuksesi ovat muualla,
 			etkä jaksa valmistautua (siirtyy ruutuun 226/227 [60%/40%] )</a> <!-- Scene random -->
 			
 	</div>
@@ -2502,29 +2600,30 @@ alistuskonjugaatioita ja matematiikasta funktioiden verrannollisuutta. (siirtyy 
 			</script>
 			
 			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks235b=new Array()
+						<script>
+function randomlinks235b(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene240"
+    links[1]="#scene240"
+	links[2]="#scene240"
+	links[3]="#scene241"
+	links[4]="#scene241"
+	links[5]="#scene241"
+	links[6]="#scene241"
+	links[7]="#scene244"
+	links[8]="#scene244"
+	links[9]="#scene244"
 
-				randomlinks235b[0]="#scene240"
-				randomlinks235b[1]="#scene240"
-				randomlinks235b[2]="#scene240"
-				randomlinks235b[3]="#scene241"
-				randomlinks235b[4]="#scene241"
-				randomlinks235b[5]="#scene241"
-				randomlinks235b[6]="#scene241"
-				randomlinks235b[7]="#scene244"
-				randomlinks235b[8]="#scene244"
-				randomlinks235b[9]="#scene244"
-				
-				function randomlinks235b(){
-					window.location=randomlinks235b[Math.floor(Math.random()*randomlinks235b.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>
 
 			<a href="#scene240" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Eväät valmiina ja laskin tarkistettu. Olen saanut hyvin luettua ja olo on luottavainen. (siirtyy ruutuun 240.)</a> 
 			<a href="javascript:randomlinks235a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Apua! Lukuloma kului ihan liian nopeasti, enkä ole ehtinyt lukea ollenkaan kaikkea.
 Toivottavasti pääsen läpi edes matikasta...(siirtyy ruutuun 241/242 [50%/50%] )</a> 
-			<a href="avascript:randomlinks235b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
+			<a href="javascript:randomlinks235b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
 läpi menee lukemattakin. (siirtyy ruutuun 240/241/244 [30%/40%/30%] )</a> 
 	
 	</div>
@@ -2551,30 +2650,13 @@ huomaamatta ja nyt on yo-kokeiden aika, mikä on päällimmäinen fiilis?</p>
 				}
 			</script>
 			
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks236b=new Array()
+			<!-- Vaihtoehto 2 randomlinks235b -->
 
-				randomlinks236b[0]="#scene240"
-				randomlinks236b[1]="#scene240"
-				randomlinks236b[2]="#scene240"
-				randomlinks236b[3]="#scene241"
-				randomlinks236b[4]="#scene241"
-				randomlinks236b[5]="#scene241"
-				randomlinks236b[6]="#scene241"
-				randomlinks236b[7]="#scene244"
-				randomlinks236b[8]="#scene244"
-				randomlinks236b[9]="#scene244"
-				
-				function randomlinks236b(){
-					window.location=randomlinks236b[Math.floor(Math.random()*randomlinks236b.length)]
-				}
-			</script>
 
 			<a href="#scene240" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Eväät valmiina ja laskin tarkistettu. Olen saanut hyvin luettua ja olo on luottavainen. (siirtyy ruutuun 240.)</a> 
 			<a href="javascript:randomlinks236a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Apua! Lukuloma kului ihan liian nopeasti, enkä ole ehtinyt lukea ollenkaan kaikkea.
 Toivottavasti pääsen edes läpi kirjoituksista...(siirtyy ruutuun 241/242 [50%/50%] )</a> 
-			<a href="avascript:randomlinks236b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
+			<a href="javascript:randomlinks235b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
 läpi menee lukemattakin. (siirtyy ruutuun 240/241/244 [30%/40%/30%] )</a> 
 	
 	</div>
@@ -2631,30 +2713,12 @@ epäsäännöllisten verbien taivutusta ja matematiikasta funktioiden verrannoll
 				}
 			</script>
 			
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks238b=new Array()
-
-				randomlinks238b[0]="#scene240"
-				randomlinks238b[1]="#scene240"
-				randomlinks238b[2]="#scene240"
-				randomlinks238b[3]="#scene241"
-				randomlinks238b[4]="#scene241"
-				randomlinks238b[5]="#scene241"
-				randomlinks238b[6]="#scene241"
-				randomlinks238b[7]="#scene244"
-				randomlinks238b[8]="#scene244"
-				randomlinks238b[9]="#scene244"
-				
-				function randomlinks238b(){
-					window.location=randomlinks238b[Math.floor(Math.random()*randomlinks238b.length)]
-				}
-			</script>
+			<!-- Vaihtoehto 2 randomlinks235b-->
 
 			<a href="#scene240" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Eväät valmiina ja laskin tarkistettu. Olen saanut hyvin luettua ja olo on luottavainen. (siirtyy ruutuun 240.)</a> 
 			<a href="javascript:randomlinks238a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Apua! Lukuloma kului ihan liian nopeasti, en ole ehtinyt lukea ollenkaan kaikkea.
 Toivottavasti pääsen läpi edes matikasta..(siirtyy ruutuun 241/242 [50%/50%] )</a> 
-			<a href="avascript:randomlinks238b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
+			<a href="javascript:randomlinks235b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
 läpi menee lukemattakin. (siirtyy ruutuun 240/241/244 [30%/40%/30%] )</a> 
 	
 	</div>
@@ -2681,30 +2745,12 @@ huomaamatta ja nyt on yo-kokeiden aika, mikä on päällimmäinen fiilis?</p>
 				}
 			</script>
 			
-			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks239b=new Array()
-
-				randomlinks239b[0]="#scene240"
-				randomlinks239b[1]="#scene240"
-				randomlinks239b[2]="#scene240"
-				randomlinks239b[3]="#scene241"
-				randomlinks239b[4]="#scene241"
-				randomlinks239b[5]="#scene241"
-				randomlinks239b[6]="#scene241"
-				randomlinks239b[7]="#scene244"
-				randomlinks239b[8]="#scene244"
-				randomlinks239b[9]="#scene244"
-				
-				function randomlinks239b(){
-					window.location=randomlinks239b[Math.floor(Math.random()*randomlinks239b.length)]
-				}
-			</script>
+			<!-- Vaihtoehto 2 randomlinks235b-->
 
 			<a href="#scene240" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Eväät valmiina ja laskin tarkistettu. Olen saanut hyvin luettua ja olo on luottavainen. (siirtyy ruutuun 240.)</a> 
 			<a href="javascript:randomlinks239a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Apua! Lukuloma kului ihan liian nopeasti, enkä ole ehtinyt lukea ollenkaan kaikkea.
 Toivottavasti pääsen edes läpi kirjoituksista...(siirtyy ruutuun 241/242 [50%/50%] )</a> 
-			<a href="avascript:randomlinks239b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
+			<a href="javascript:randomlinks235b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
 läpi menee lukemattakin. (siirtyy ruutuun 240/241/244 [30%/40%/30%] )</a> 
 	
 	</div>
@@ -2860,6 +2906,9 @@ VALMISTUNUT LUKIOSTA JA PELI LOPPUU MUTTA SIIHEN PITÄÄ SITTEN PITÄÄ VÄHÄ A
 VAIHTOEHTOJA TULEVAISUUDESSA ON. LUKIOSTA JOS MIELIS VIELÄ PAPERIT SAADA NIIN PITÄS KOKO
 TUTKINTO SUORITTAA ALUSTA. PAKOLLISEN YO AINEEN SAA KAKSI KERTAA UUSIA JOS EI MENE LÄPI.Vai
 oltaisko -->
+
+
+<!-- TÄSTÄ ETEENPÄIN PIENENT RANDOMSCRITIT EI TOIMI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 	
 		<!-- Scene 251 -->
 	<div data-role="page" id="scene251">
@@ -2881,19 +2930,17 @@ lukulomalle, on koulussa vähän tylsää, miten suhtaudut muuttuneeseen tilante
 			<p>Penkkarit meni kivasti, nyt valmistaudut äikän yo-kokeeseen</p>
 			
 			<!-- Vaihtoehto 2 & scene 253 -->
-			<script>
-				var randomlinks252=new Array()
+<script>
+function randomlinks252(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene254"
+    links[1]="#scene255"
 
-				randomlinks252[0]="#scene254"
-				randomlinks252[1]="#scene255"
-				
-				
-			
-				function randomlinks252(){
-					window.location=randomlinks252[Math.floor(Math.random()*randomlinks252.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>
 			<a href="#scene254" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Valmistaudut huolellisesti ja luet (siirtyy ruutuun 254)</a> 
 			<a href="javascript:randomlinks252()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: et jaksa valmistautua (254/255 50%/50%))</a> 
 	
@@ -2943,33 +2990,30 @@ lukulomalle, on koulussa vähän tylsää, miten suhtaudut muuttuneeseen tilante
 		<div role="main" class="ui-content">
 			<h1>Ruutu 256</h1>
 			<p>Kesä meni, ehditkö lukea?</p>
-			
-			<script>
-				var randomlinks256a=new Array()
 
-				randomlinks256a[0]="#scene261"
-				randomlinks256a[1]="#scene262"
-				
-				
-			
-				function randomlinks256a(){
-					window.location=randomlinks256a[Math.floor(Math.random()*randomlinks256a.length)]
-				}
-			</script>
-			
 			<script>
-				var randomlinks256b=new Array()
+function randomlinks256a(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene261"
+    links[1]="#scene262"
 
-				randomlinks256b[0]="#scene262"
-				randomlinks256b[1]="#scene263"
-				
-				
-			
-				function randomlinks256b(){
-					window.location=randomlinks256b[Math.floor(Math.random()*randomlinks256b.length)]
-				}
-			</script>
-			
+ 
+    window.location=links[myrandom]
+}
+</script>
+
+			<script>
+function randomlinks256b(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene262"
+    links[1]="#scene263"
+
+ 
+    window.location=links[myrandom]
+}
+</script>
 
 			<a href="#scene261" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Joo, päntätty on (siirtyy ruutuun 261)</a> 
 			<a href="javascript:randomlinks256a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Yritin, mutta oli niin paljon muuta (siirtyy ruutuun 261/262 [50%/50%]</a> 
@@ -3016,18 +3060,16 @@ aiot sen käyttää?</p>
 
 			<!-- Vaihtoehto 2 -->
 			<script>
-				var randomlinks259=new Array()
+function randomlinks259(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene243"
+    links[1]="#scene264"
 
-				randomlinks259[0]="#scene243"
-				randomlinks259[1]="#scene264"
-				
-				
-			
-				function randomlinks259(){
-					window.location=randomlinks259[Math.floor(Math.random()*randomlinks259.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>
 			<a href="#scene240" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Eväät valmiina ja laskin tarkistettu. Pysyin hyvin suunnitelmassa ja uskon kirjoitusten
 menevän hyvin. (siirtyy ruutuun 240.)</a> 
 			<a href="javascript:randomlinks259()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Apua! Et ihan pysynyt suunnitelmassa, mitenkähän kirjoitukset menee? Olisiko sittenkin
@@ -3045,43 +3087,43 @@ epäsäännöllisten verbien taivutusta ja matematiikasta funktioiden verrannoll
 			<p>yokokeet alkaa mikä fiilis?</p>
 
 			<!-- Vaihtoehto 2 -->
-			<script>
-				var randomlinks260a=new Array()
+						<script>
+function randomlinks260a(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene241"
+    links[1]="#scene264"
 
-				randomlinks260a[0]="#scene241"
-				randomlinks260a[1]="#scene264"
-				
-				
-			
-				function randomlinks260a(){
-					window.location=randomlinks260a[Math.floor(Math.random()*randomlinks260a.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>
 			
 			<!-- Vaihtoehto 3 -->
-			<script>
-				var randomlinks260b=new Array()
+<script>
+function randomlinks260b(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene240"
+    links[1]="#scene240"
+	links[2]="#scene240"
+	links[3]="#scene241"
+	links[4]="#scene241"
+	links[5]="#scene241"
+	links[6]="#scene264"
+	links[7]="#scene264"
+	links[8]="#scene264"
+	links[9]="#scene264"
 
-				randomlinks260b[0]="#scene240"
-				randomlinks260b[1]="#scene240"
-				randomlinks260b[2]="#scene240"
-				randomlinks260b[3]="#scene241"
-				randomlinks260b[4]="#scene241"
-				randomlinks260b[5]="#scene241"
-				randomlinks260b[6]="#scene264"
-				randomlinks260b[7]="#scene264"
-				randomlinks260b[8]="#scene264"
-				randomlinks260b[9]="#scene264"
-				
-				function randomlinks260b(){
-					window.location=randomlinks260b[Math.floor(Math.random()*randomlinks260b.length)]
-				}
-			</script>
-
+ 
+    window.location=links[myrandom]
+}
+</script>
+			
 			<a href="#scene240" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 1: Eväät valmiina ja laskin tarkistettu. Olen saanut hyvin luettua ja olo on luottavainen. (siirtyy ruutuun 240.)</a> 
 			<a href="javascript:randomlinks260a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 2: Apua! Lukuloma kului ihan liian nopeasti, enkä ole ehtinyt lukea ollenkaan kaikkea.
 Toivottavasti pääsen läpi edes matikasta...(siirtyy ruutuun 241/264 [50%/50%] )</a> 
-			<a href="avascript:randomlinks260b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
+			<a href="javascript:randomlinks260b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Vaihtoehto 3: Lukeminen jäi vähiin, mutta se onkin ihan yliarvostettua. Kurssit on käyty, joten kyllä kokeet
 läpi menee lukemattakin. (siirtyy ruutuun 240/241/264 [30%/40%/30%] )</a> 
 	
 	</div>
@@ -3303,7 +3345,7 @@ sinun mahdollisuus saada jonkinlaista duunia.</p>
 koulutukseesi. Muistat samalla, että seuraava ohjaamo käynti olisi ensi viikolla.</p>
 			
 
-			<a href="#scene?" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> >>  (Siirry ruutuun 410)</a> 
+			<a href="#scene410" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> >>  (Siirry ruutuun 410)</a> 
 
 	</div>
 	</div>	
@@ -3343,45 +3385,42 @@ jotka tukisivat myös harrastustasi. Innostut työntekijän kertomista vaihtoehd
 			<p>Olet viimeaikoina juonut lähinnä kavereidesi juomia. Uudet juhlat ovat tiedossa ja kaveri pyytävät tällä
 kertaa sinua hankkimaan alkoholijuomat. Miten ajattelit juomien hankinnan toteuttaa?</p>
 			
-			<script>
-				var randomlinks500a=new Array()
 
-				randomlinks500a[0]="#scene502"
-				randomlinks500a[1]="#scene503"
-				
-				
-			
-				function randomlinks500a(){
-					window.location=randomlinks500a[Math.floor(Math.random()*randomlinks500a.length)]
-				}
-			</script>
-			
-			<script>
-				var randomlinks500b=new Array()
+									<script>
+function randomlinks500a(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene502"
+    links[1]="#scene503"
 
-				randomlinks500b[0]="#scene502"
-				randomlinks500b[1]="#scene504"
-				
-				
-			
-				function randomlinks500b(){
-					window.location=randomlinks500b[Math.floor(Math.random()*randomlinks500b.length)]
-				}
-			</script>
-			
-			<script>
-				var randomlinks500c=new Array()
+ 
+    window.location=links[myrandom]
+}
+</script>
 
-				randomlinks500c[0]="#scene502"
-				randomlinks500c[1]="#scene505"
-				
-				
-			
-				function randomlinks500c(){
-					window.location=randomlinks500c[Math.floor(Math.random()*randomlinks500c.length)]
-				}
-			</script>
-			
+									<script>
+function randomlinks500b(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene502"
+    links[1]="#scene504"
+
+ 
+    window.location=links[myrandom]
+}
+</script>
+
+<script>
+function randomlinks500c(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene502"
+    links[1]="#scene505"
+
+ 
+    window.location=links[myrandom]
+}
+</script>
 			<a href="javascript:randomlinks500a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> Tiedän missä vanhempani säilyttävät alkoholia ja päätän varastaa juomat kotoa. (Siirry
 ruutuun 50/50 502/503)</a> 
 			<a href="javascript:randomlinks500b()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> Kaveriporukassa päätämme kokeilla juoksu kaljojen hankkimista. (Siirry ruutuun 50/50
@@ -3401,59 +3440,57 @@ alkoholia. (Siirry ruutuun 50/50 502/505)</a>
 			<p>Saitte juomat hankittua ilman ongelmia ja menette vakituiseen paikkaan hengailemaan ja juomaan.
 Kuinka paljon ajattelit juoda?</p>
 			
-			<script>
-				var randomlinks502a=new Array()
 
-				randomlinks502a[0]="#scene506"
-				randomlinks502a[1]="#scene506"
-				randomlinks502a[2]="#scene506"
-				randomlinks502a[3]="#scene507"
-				randomlinks502a[4]="#scene507"
-				randomlinks502a[5]="#scene507"
-				randomlinks502a[6]="#scene507"
-				randomlinks502a[7]="#scene507"
-				randomlinks502a[8]="#scene507"
-				randomlinks502a[9]="#scene507"
-				
-				
-			
-				function randomlinks502a(){
-					window.location=randomlinks502a[Math.floor(Math.random()*randomlinks502a.length)]
-				}
-			</script>
-			
 			<script>
-				var randomlinks502b=new Array()
+function randomlinks502a(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene506"
+    links[1]="#scene506"
+	links[2]="#scene506"
+	links[3]="#scene507"
+	links[4]="#scene507"
+	links[5]="#scene507"
+	links[6]="#scene507"
+	links[7]="#scene507"
+	links[8]="#scene507"
+	links[9]="#scene507"
 
-				randomlinks502b[0]="#scene506"
-				randomlinks502b[1]="#scene507"
-				
-				
-			
-				function randomlinks502b(){
-					window.location=randomlinks502b[Math.floor(Math.random()*randomlinks502b.length)]
-				}
-			</script>
-			
+ 
+    window.location=links[myrandom]
+}
+</script>
+
 			<script>
-				var randomlinks502c=new Array()
+function randomlinks502b(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene506"
+    links[1]="#scene507"
 
-				randomlinks502c[0]="#scene506"
-				randomlinks502c[1]="#scene506"
-				randomlinks502c[2]="#scene506"
-				randomlinks502c[3]="#scene506"
-				randomlinks502c[4]="#scene506"
-				randomlinks502c[5]="#scene506"
-				randomlinks502c[6]="#scene506"
-				randomlinks502c[7]="#scene507"
-				randomlinks502c[8]="#scene507"
-				randomlinks502c[9]="#scene507"
-				
-			
-				function randomlinks502c(){
-					window.location=randomlinks502c[Math.floor(Math.random()*randomlinks502c.length)]
-				}
-			</script>
+ 
+    window.location=links[myrandom]
+}
+</script>
+			<script>
+function randomlinks502b(){
+    var myrandom=Math.round(Math.random()*9)
+    var links=new Array()
+    links[0]="#scene506"
+    links[1]="#scene506"
+	links[2]="#scene506"
+	links[3]="#scene506"
+	links[4]="#scene506"
+	links[5]="#scene506"
+	links[6]="#scene506"
+	links[7]="#scene507"
+	links[8]="#scene507"
+	links[9]="#scene507"
+
+ 
+    window.location=links[myrandom]
+}
+</script>
 			
 			<a href="javascript:randomlinks502a()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> En pahemmin ajatteli juomistani, avaan uuden pullon kunhan edellinen on tyhjä. (Siirry
 ruutuun 30/70 506/507)</a> 
@@ -3472,19 +3509,18 @@ kuin olin ajatellut. (Siirry ruutuun 70/30 506/507)</a>
 			<p>Juhlien jälkeisenä päivänä vanhemmat haluavat keskustella kanssasi. He ovat huomanneet sinun
 varastaneen juomia viinakaapistaan ja haluavat selityksen. Mitä kerrot heille?</p>
 			
-			<script>
-				var randomlinks503=new Array()
 
-				randomlinks503[0]="#scene508"
-				randomlinks503[1]="#scene509"
-				
-				
-			
-				function randomlinks503(){
-					window.location=randomlinks503[Math.floor(Math.random()*randomlinks503.length)]
-				}
-			</script>
-			
+						<script>
+function randomlinks503(){
+    var myrandom=Math.round(Math.random()*1)
+    var links=new Array()
+    links[0]="#scene508"
+    links[1]="#scene509"
+
+ 
+    window.location=links[myrandom]
+}
+</script>
 			<a href="javascript:randomlinks503()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> Kerron totuuden. (Siirry ruutuun 50/50 508/509)</a> 
 			<a href="javascript:randomlinks503()" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"> Kerron varastaneeni juomia kavereilleni, mutta valehtelen, että en itse juonut mitään. (Siirry
 ruutuun 50/50 508/509)</a> 
