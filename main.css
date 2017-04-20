@@ -1,6 +1,22 @@
-/* Void color */
-body {
+/* Body/viewport */
+.ui-mobile, .ui-mobile body {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	height: 100% !important;
 	background: black !important;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.ui-header .ui-title,
+.ui-footer .ui-title {
+	margin: 0px;
+	width: 100%;
 }
 
 
