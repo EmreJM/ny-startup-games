@@ -1,11 +1,11 @@
 /* Body/viewport */
 .ui-mobile, .ui-mobile body {
-	position: fixed;
+	/*position: fixed;
 	top: 0px;
 	bottom: 0px;
 	right: 0px;
 	left: 0px;
-	height: 100% !important;
+	height: 100% !important;*/
 	background: black !important;
 }
 
